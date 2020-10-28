@@ -7,7 +7,7 @@ types = {'tempout': float}
 #initialize my data variable
 
 data = {}
-for column in columns
+for column in columns:
     data[column] = [] 
 
 #read the data file
@@ -20,7 +20,7 @@ with open(filename, 'r') as datafile:
     #read and parse the rest of the file
     for line in datafile:
         split_line = line.split()
-        for column in columns
+        for column in columns:
             i = columns[column]
             t = types.get(column, str)
             value = t(split_line[i])
