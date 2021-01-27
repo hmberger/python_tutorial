@@ -1,6 +1,6 @@
 from mysci.readdata import read_data
 from mysci.printing import print_comparison
-from mysci.compuation import compute_windchill
+from mysci.computation import compute_windchill
 
 #column names and column indices to read
 columns = {'date':0, 'time':1, 'tempout':2, 'windspeed':7, 'windchill':12}
@@ -23,4 +23,4 @@ for temp, windspeed in zip(data['tempout'], data['windspeed']):
     windchill.append(compute_windchill(temp, windspeed))
 
 #Output comparison
-print_comparison('WINDCHILL', data['date'], data['time'], data['windspeed'],
+print_comparison('WINDCHILL', data['date'], data['time'], data['windchill'], windchill)

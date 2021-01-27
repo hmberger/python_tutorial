@@ -28,4 +28,4 @@ def read_data(columns, types={}, filename="data/wxobs20170821.txt"):
                 value = t(split_line[i])
                 data[column].append(value)
 
-
+    return data
